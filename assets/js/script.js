@@ -281,13 +281,107 @@ function displayeObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, 
         }
     ];
     const event = events[Math.floor(Math.random() * events.length)];
+    displayEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
 }
 
-function displayEnemyEvent() {
-
+function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier) {
+    const enemies = [
+        {
+            description: "Even with a bright light of the day, you seem to barely see mystique creature. A dark, shapeless creature that lurks in the shadows and dark parts of the forest. What do you do?",
+            options: [
+                { text: "Fight the Shadow Beast without a light source.", damage: 50 * damageMultiplier, alert: "You fought the Shadow Beast without a light source and took 50 damage." },
+                { text: "Use a torch or lantern to scare it away.", damage: 0, alert: "You used a torch to scare away the Shadow Beast and avoided damage." },
+                { text: "Shout loudly to scare it away.", damage: 50 * damageMultiplier, alert: "Shouting had no effect and the Shadow Beast attacked, causing 50 damage." },
+                { text: "Throw a rock at it.", damage: 50 * damageMultiplier, alert: "Throwing a rock did nothing and the Shadow Beast attacked, causing 50 damage." }
+            ]
+        },
+        {
+            description: "As you are walking in woods, you can feel weird sensation that something is looking at you. You look above, and there, in tree branches you see bright orange snake, probably 10 meters long. It has poisonous fangs. What do you do?",
+            options: [
+                { text: "Attack the serpent head-on.", damage: 40 * damageMultiplier, alert: "Attacking the serpent head-on resulted in a venomous bite, causing 40 damage." },
+                { text: "Use a ranged weapon.", damage: 0, alert: "You used a ranged weapon and defeated the serpent safely." },
+                { text: "Try to catch the serpent by hand.", damage: 40 * damageMultiplier, alert: "Catching the serpent by hand was a bad idea, you got bit, causing 40 damage." },
+                { text: "Run past the serpent quickly.", damage: 40 * damageMultiplier, alert: "Running past the serpent quickly resulted in a bite, causing 40 damage." }
+            ]
+        },
+        {
+            description: "You can hear terrible howls in a distance, and they seem to get closer every second. Before you, there it is . A ghostly wolf that can phase in and out of reality. What do you do?",
+            options: [
+                { text: "Fight the wolf with a magic silver sword.", damage: 30 * damageMultiplier, alert: "Fighting the wolf directly resulted in injuries, causing 30 damage." },
+                { text: "Use a magic spell to banish it.", damage: 0, alert: "You used a magic spell and banished the Phantom Wolf to underground realm safely." },
+                { text: "Climb a tree to escape it.", damage: 30 * damageMultiplier, alert: "Climbing a tree didn't help and the wolf attacked, causing 30 damage." },
+                { text: "Throw magic water at it.", damage: 30 * damageMultiplier, alert: "Throwing water had no effect and the wolf attacked, causing 30 damage." }
+            ]
+        },
+        {
+            description: "Through binocular you see a large green ogre with spiky thorns covering its back is walking in your direction. He will be here soon. You cannon escape it. What do you do?",
+            options: [
+                { text: "Engage the ogre in close combat.", damage: 60 * damageMultiplier, alert: "Engaging the ogre in close combat resulted in serious injuries, causing 60 damage." },
+                { text: "Set a trap.", damage: 0, alert: "You set a trap and safely immobilize the Thornback Ogre." },
+                { text: "Throw a net over it.", damage: 60 * damageMultiplier, alert: "Throwing a net was ineffective and the ogre attacked, causing 60 damage." },
+                { text: "Distract it with enchanted song.", damage: 60 * damageMultiplier, alert: "Singing didn’t work, you are a terrible singer, which angered Ogre and it attacked, causing 60 damage." }
+            ]
+        },
+        {
+            description: "As you walk down the path, you hear someone crying. You think it is a lost child and want to help it but, you find something terrifying. A ghostly figure whose scream can paralyze its victims. What do you do?",
+            options: [
+                { text: "Confront the banshee without ear protection.", damage: 50 * damageMultiplier, alert: "Confronting the banshee without ear protection paralyzed you, causing 50 damage." },
+                { text: "Use earplugs and hit banshee with a branch.", damage: 0, alert: "You used earplugs and confronted the banshee safely." },
+                { text: "Cover your ears with your hands and run fast.", damage: 50 * damageMultiplier, alert: "Covering your ears with your hands and running fast wasn't enough to escape banshee, causing 50 damage." },
+                { text: "Scream back at banshee.", damage: 50 * damageMultiplier, alert: "Screaming back at banshee at first made her laugh, then really angry, causing 50 damage." }
+            ]
+        },
+        {
+            description: "Down the path you see something that resembles a green bush, but realise that it’s a blob of slime that can dissolve anything it touches. What do you do?",
+            options: [
+                { text: "Fight the slime directly.", damage: 35 * damageMultiplier, alert: "Fighting the slime directly resulted in burns, causing 35 damage." },
+                { text: "Use freezing magic to solidify it.", damage: 0, alert: "You used freezing magic and safely solidified the Acidic Slime." },
+                { text: "Step on it to squash it.", damage: 35 * damageMultiplier, alert: "Stepping on the slime caused it to burn you, causing 35 damage." },
+                { text: "Try to capture it in a trap.", damage: 35 * damageMultiplier, alert: "Trying to capture the slime in a trap was dangerous, causing 35 damage." }
+            ]
+        },
+        {
+            description: "The section of the forest that you are walking right now is scorched. You see a small dragon that breathes fire. Fun fact about dragons: a small dragon in dragon world is still 12 meters high and weights around 10 tonnes. What do you do?",
+            options: [
+                { text: "Attack the dragon without fire protection.", damage: 100 * damageMultiplier, alert: "Attacking the Fury without fire protection resulted in burns, causing 100 damage." },
+                { text: "Use a fire-resistant shield, frozen sword and magic spell to banish it.", damage: 0, alert: "You used a fire-resistant shield, frozen sword and spell and safely banish the Inferno Fury to mountains." },
+                { text: "Throw water at the dragon.", damage: 100 * damageMultiplier, alert: "Throwing water was ineffective and made dragon laugh, the enraged Fury attacked, causing 100 damage." },
+                { text: "Hide behind a rock.", damage: 100 * damageMultiplier, alert: "Hiding behind a rock didn't protect you from the fiery breath of the dragon, causing 100 damage." }
+            ]
+        },
+        {
+            description: "Near a path that you are walking is a huge cave entrance. A swarm of bats that drain blood from their victims fly right at you. What do you do?",
+            options: [
+                { text: "Swat at the bats.", damage: 25 * damageMultiplier, alert: "Swatting at the bats aggravated them, causing 25 damage." },
+                { text: "Use a bat repellant and light a fire.", damage: 0, alert: "You used a repellant and lit a fire and the bats fled safely." },
+                { text: "Run through the swarm.", damage: 25 * damageMultiplier, alert: "Running through the swarm got you bitten, causing 25 damage." },
+                { text: "Cover yourself with a cloak.", damage: 25 * damageMultiplier, alert: "Covering yourself with a cloak didn't protect you from the bats, causing 25 damage." }
+            ]
+        },
+        {
+            description: "As you are resting and gathering energy for continuation of your journey on a nearby pile of boulders, suddenly boulders start moving and you realise that you were sitting on a stone golem covered in sharp spikes. Fun fact: stone gollems are very slow and weight up to 30 tonnes. What do you do?",
+            options: [
+                { text: "Attack the golem with sword and magic spell.", damage: 50 * damageMultiplier, alert: "Attacking the golem with sword and spells didn’t work and resulted in injuries, causing 50 damage." },
+                { text: "Use a hammer to break its legs and spikes.", damage: 0, alert: "You used a hammer and safely broke the golem's legs and spikes so it can’t harm anyone anymore." },
+                { text: "Try to push the golem over.", damage: 50 * damageMultiplier, alert: "Trying to push the golem over didn't work, and it attacked, causing 50 damage." },
+                { text: "Shout to distract it.", damage: 50 * damageMultiplier, alert: "Shouting didn't distract the golem, it just woke up more stone golems from pile of boulders and they attacked, causing 50 damage." }
+            ]
+        },
+        {
+            description: "In a colder biome, you stumble on a frozen beast. A towering giant that emanates a freezing aura. What do you do?",
+            options: [
+                { text: "Engage the giant without warm clothing or heat sources.", damage: 55 * damageMultiplier, alert: "Engaging the giant without protection resulted in frostbite, causing 55 damage." },
+                { text: "Use fire magic and a heat source to counter the cold beast.", damage: 0, alert: "You used fire magic and torch and safely countered the Frost Giant's cold aura." },
+                { text: "Try to climb the giant and stick burning torch in his ear.", damage: 55 * damageMultiplier, alert: "Climbing the giant was dangerous and you fell, causing 55 damage." },
+                { text: "Throw fire ball at the giant.", damage: 55 * damageMultiplier, alert: "Throwing fire ball at the giant had no effect and it attacked, causing 55 damage." }
+            ]
+        },
+    ];
+    const enemy = enemies[Math.floor(Math.random() * enemies.length)];
+    displayEvent(enemy, health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
 }
 
-function displayeEvent() {
+function displayEvent() {
 
 }
 

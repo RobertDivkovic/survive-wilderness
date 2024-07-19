@@ -9,8 +9,16 @@
 <body>
     <div class="container">
         <h1>Escape the Wilderness</h1>
+        <!--Adding game intro-->
         <div class="game-intro">
             <p>Welcome to "Escape the Wilderness"! In this game, you will face various obstacles, enemies and friendly creatures, try to survive the journey. Enter your name and select the difficulty level to begin your exciting journey.</p>
+            <input type="text" id="playerName" placeholder="Enter your name">
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="moderate" selected>Moderate</option>
+                <option value="hard">Hard</option>
+                <option value="custom">Custom</option>
+            </select>
         </div>
     </div>   
     <script src="assets/js/script.js"></script>

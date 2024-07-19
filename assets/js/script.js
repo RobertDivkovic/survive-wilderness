@@ -381,8 +381,28 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
     displayEvent(enemy, health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
 }
 
-function displayEvent() {
+function displayEvent(event, health, currentTurn, maxTurns, healthMultiplier, damageMultiplier) {
+    const eventArea = document.getElementById('eventArea');
+    //set the inner HTML of 'eventArea' to display the event description
+    eventArea.innerHTML = `<p>${event.description}</p>`;
+    //iterate through each option in the event options array
+    event.options.forEach((option, index) => {
+        // create a new button element
+        const button = document.createElement('button');
+        button.innerText = option.text;
+        button.addEventListener('clicke', () => {
+            //decrease health by the option's damage value
+            health -= option.damage;
+            //show an alert with the option text and the damage caused if any
+            alert(option.text + (option.damage > 0 ? `caused ${option.damage} damage.` : " was safe."));
+            currentTurn++;
+            updateStatus(health, currentTurn, maxTurns);
+            nextTurn(healt, health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
 
+        });
+        //append the button to the eventArea element
+        eventArea.appendChild(button);
+    })
 }
 
 function displayWizardEvent() {

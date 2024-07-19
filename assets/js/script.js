@@ -46,8 +46,19 @@ function updateStatus(health, currentTurn, maxTurns) {
 
 }
 
-function nextTurn() {
-
+function nextTurn(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier) {
+    if (currentTurn >= maxTurns || health <= 0) {
+        endGame(health);
+        return;
+    }
+    const eventType = Math.random();
+    if (eventType < 0.3) { // there is 30% cnance to stumble upon wizard event
+        displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
+    } else if (eventType < 0.75) { // there is 45% chance of obstacle event (0.3 + 0.45 = 0.75)
+        displayeObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
+    } else { // the rest is 25% ov enemy event
+        displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
+    }
 }
 
 function displayeObstacleEvent() {

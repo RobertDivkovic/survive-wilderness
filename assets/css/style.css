@@ -28,10 +28,10 @@ input, select, button {
     font-size: 14px;
 }
 
-/*.hidden {
+.hidden {
     display: none;
 }
-*/
+
 
 .background-img {
     width: 90%;

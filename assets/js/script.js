@@ -8,7 +8,7 @@ function startGame() {
         return;
     }
     document.querySelector('.game-intro').classList.add('hidden');
-    document.querySelector('#gameArea').classicList.remove('hidden');
+    document.querySelector('#gameArea').classList.remove('hidden');
 
     document.getElementById('playerNameDisplay').innerText = `Name: ${playerName}`;
     let maxTurns;
@@ -281,7 +281,7 @@ function displayeObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, 
         }
     ];
     const event = events[Math.floor(Math.random() * events.length)];
-    displayEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
+    displayEvent(event, health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
 }
 
 function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier) {
@@ -390,14 +390,14 @@ function displayEvent(event, health, currentTurn, maxTurns, healthMultiplier, da
         // create a new button element
         const button = document.createElement('button');
         button.innerText = option.text;
-        button.addEventListener('clicke', () => {
+        button.addEventListener('click', () => {
             //decrease health by the option's damage value
             health -= option.damage;
             //show an alert with the option text and the damage caused if any
             alert(option.text + (option.damage > 0 ? `caused ${option.damage} damage.` : " was safe."));
             currentTurn++;
             updateStatus(health, currentTurn, maxTurns);
-            nextTurn(healt, health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
+            nextTurn(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
 
         });
         //append the button to the eventArea element
@@ -405,8 +405,41 @@ function displayEvent(event, health, currentTurn, maxTurns, healthMultiplier, da
     })
 }
 
-function displayWizardEvent() {
+function displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier) {
+    //generate a new wizard question
+    const wizardQuestion = generateWizardQuestion();
+    const eventArea = document.getElementById('eventArea');
+    //set the inner HTML of 'eventArea' to display the wizard's question
+    eventArea.innerHTML = `<p>The Wandering Wizard approaches you and asks: "${wizardQuestion.question}"</p>`;
 
+    //ccreate an input element for the player's answer
+    const input = document.createElement('input');
+    input.type = 'number';
+    input.placeholder = 'Your answer';
+    eventArea.appendChild(input); //append the input element to the eventArea
+
+    const submitButton = document.createElement('button');
+    submitButton.innerText = 'Submit answer';
+    submitButton.addEventListener('click', () => {
+        //get the player's answer from the input field and parse it as an integer
+        const playerAnswer = parseInt(input.value, 10);
+        if (playerAnswer === wizardQuestion.answer) {
+            const healthPack = getRandomHealthPack();
+            //increase health, considering the health pack and multiplier, ensuring it doesn't exceed 1000
+            health = Math.min(1000, health + healthPack.health * healthMultiplier);
+            alert(`Corect! You recived a ${healthPack.name} that restored ${healthPack.health * healthMultiplier} health.`)
+        } else {
+            //if incorrect, reduce health by 50 multiplied by the damage multiplier
+            health -= 50 * damageMultiplier;
+            alert(`Wrong answer! The wizard scolds you and you lose 50 health.`);
+        }
+        currentTurn++;
+        updateStatus(health, currentTurn, maxTurns);
+        //proceed to the next turn with updated values
+        nextTurn(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
+    });
+    //append the submit button to the eventArea element
+    eventArea.appendChild(submitButton);
 }
 
 function generateWizardQuestion() {

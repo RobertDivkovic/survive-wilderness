@@ -74,6 +74,7 @@ function getRandomHealthPack() {
 
 }
 
-function endGame() {
-
+function endGame(health) {
+    const eventArea = document.getElementById('eventArea');
+    eventArea.innerHTML = health > 0 ? `<p>Congratulations! You survived with ${health} health remaining.</p>` : `<p>Game Over! You ran out of health.</p>`;
 }

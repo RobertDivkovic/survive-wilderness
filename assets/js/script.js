@@ -43,7 +43,7 @@ function startGame() {
 function updateStatus(health, currentTurn, maxTurns) {
     document.getElementById('playerHealthBar-fill').style.width = `${(health / 1000) * 100}%`;
     document.getElementById('turnCounter').innerText = `Turns: ${currentTurn}/${maxTurns}`;
-
+    document.getElementById('healthValue').innerText = `Health: ${health}`;
 }
 
 function nextTurn(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier) {

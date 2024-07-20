@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Escape the Wilderness</title>
 </head>
+
 <body>
+    <!-- Add container to wrap up every element-->
     <div class="container">
         <h1>Escape the Wilderness</h1>
         <!--Adding game intro-->
         <div class="game-intro">
-            <p>Welcome to "Escape the Wilderness"! In this game, you will face various obstacles, enemies and friendly creatures, try to survive the journey. Enter your name and select the difficulty level to begin your exciting journey.</p>
+            <p>Welcome to "Escape the Wilderness"! In this game, you will face various obstacles, enemies and friendly
+                creatures, try to survive the journey. Enter your name and select the difficulty level to begin your
+                exciting journey.</p>
             <input type="text" id="playerName" placeholder="Enter your name">
+            <!-- Adding difficulty levels -->
             <select id="difficulty">
                 <option value="easy">Easy</option>
                 <option value="moderate" selected>Moderate</option>
                 <option value="hard">Hard</option>
                 <option value="custom">Custom</option>
             </select>
+            <!-- Game start button -->
             <button id="startGame">Start Journey</button>
         </div>
+        <!-- Adding health container-->
         <div id="healthContainer">
             <div id="playerHealthBar">
                 <div id="playerHealthBar-fill"></div>
             </div>
             <div id="healthValue">Health: 1000</div>
         </div>
+        <!-- Add game area, to be shown when game starts -->
         <div id="gameArea" class="game-area hidden">
+            <!-- Background image -->
             <img src="assets/images/wildernessimage.jpg" alt="Wilderness" class="background-img">
             <div class="status-bar">
                 <span id="playerNameDisplay"></span>
@@ -38,7 +48,8 @@
             </div>
             <div id="eventArea"></div>
         </div>
-    </div>   
+    </div>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

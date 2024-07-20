@@ -54,7 +54,7 @@ function startGame() {
 function updateStatus(health, currentTurn, maxTurns) {
     document.getElementById('playerHealthBar-fill').style.width = `${(health / 1000) * 100}%`;
     document.getElementById('turnCounter').innerText = `Turns: ${currentTurn}/${maxTurns}`;
-    document.getElementById('healthValue').innerText = `Health: ${health}`;
+    document.getElementById('healthValue').innerText = `Health: ${health}`; //update health value display
 }
 
 function nextTurn(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier) {
@@ -530,5 +530,8 @@ function resetGame() {
     document.querySelector('#gameArea').classList.add('hidden');
     document.getElementById('resetGame').classList.add('hidden'); // hide reset button
     document.getElementById('eventArea').innerHTML = ''; // clear event area
+    document.getElementById('playerHealthBar-fill').style.width = '100%'; // reset health bar
+    document.getElementById('healthValue').innerText = 'Health 1000'; // reset health value display
+    document.getElementById('turnCounter').innerText = 'Turns: 0/0'; // reset turn counter display
     
 }

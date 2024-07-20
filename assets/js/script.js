@@ -471,7 +471,14 @@ function generateWizardQuestion() {
 }
 
 function getRandomHealthPack() {
-
+    const healthPacks = [
+        { name: 'Basic Health Pack', health: 35},
+        { name: 'Advanced Health Pack', health: 45},
+        { name: 'Medical Kit', health: 55},
+        { name: 'Herbal Remedy Pack', health: 75},
+        { name: 'Regeneration Elixir', health: 100}
+    ];
+    return healthPacks[Math.floor(Math.random() * healthPacks.length)];
 }
 
 function endGame(health) {

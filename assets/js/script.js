@@ -1,4 +1,5 @@
 document.getElementById('startGame').addEventListener('click', startGame);
+document.getElementById('resetGame').addEventListener('click', resetGame);
 
 // arrays to track used events
 let usedObstacles = [];
@@ -15,6 +16,7 @@ function startGame() {
     }
     document.querySelector('.game-intro').classList.add('hidden');
     document.querySelector('#gameArea').classList.remove('hidden');
+    document.getElementById('resetGame').classList.remove('hidden'); // show reset button
 
     document.getElementById('playerNameDisplay').innerText = `Name: ${playerName}`;
     let maxTurns;
@@ -520,4 +522,13 @@ function getRandomHealthPack() {
 function endGame(health) {
     const eventArea = document.getElementById('eventArea');
     eventArea.innerHTML = health > 0 ? `<p>Congratulations! You survived with ${health} health remaining.</p>` : `<p>Game Over! You ran out of health.</p>`;
+    document.getElementById('resetGame').classList.remove('hidden'); // show reset button when game ends
+}
+
+function resetGame() {
+    document.querySelector('.game-intro').classList.remove('hidden');
+    document.querySelector('#gameArea').classList.add('hidden');
+    document.getElementById('resetGame').classList.add('hidden'); // hide reset button
+    document.getElementById('eventArea').innerHTML = ''; // clear event area
+    
 }

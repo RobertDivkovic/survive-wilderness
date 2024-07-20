@@ -443,7 +443,31 @@ function displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, dam
 }
 
 function generateWizardQuestion() {
+    const num1 = Math.floor(Math.random() * 20) + 1;
+    const num2 = Math.floor(Math.random() * 20) + 1;
+    const operations = ['+', '-', '*', '/'];
+    const operation = operations[Math.floor(Math.random() * operations.length)];
+    let question, answer;
 
+    switch (operations) {
+        case '+':
+            question = `${num1} + ${num2}`;
+            answer = num1 + num2;
+            break;
+        case '-':
+            question = `${num1} - ${num2}`;
+            answer = num1 - num2;
+            break;
+        case '*':
+            question = `${num1} * ${num2}`;
+            answer = num1 * num2;
+            break;
+        case '*':
+            question = `${num1} / ${num2}`;
+            answer = Math.floor(num1 / num2); // round down and return largest integer
+            break;
+    }
+    return { question, answer};
 }
 
 function getRandomHealthPack() {

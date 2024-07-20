@@ -36,8 +36,8 @@ function startGame() {
             break;
     }
     let currentTurn = 0;
-    updateStatus(health, currentTurn, maxTurns)
-    nextTurn(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier)
+    updateStatus(health, currentTurn, maxTurns);
+    nextTurn(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
 }
 
 function updateStatus(health, currentTurn, maxTurns) {
@@ -402,7 +402,7 @@ function displayEvent(event, health, currentTurn, maxTurns, healthMultiplier, da
         });
         //append the button to the eventArea element
         eventArea.appendChild(button);
-    })
+    });
 }
 
 function displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier) {
@@ -427,7 +427,7 @@ function displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, dam
             const healthPack = getRandomHealthPack();
             //increase health, considering the health pack and multiplier, ensuring it doesn't exceed 1000
             health = Math.min(1000, health + healthPack.health * healthMultiplier);
-            alert(`Corect! You recived a ${healthPack.name} that restored ${healthPack.health * healthMultiplier} health.`)
+            alert(`Corect! You recived a ${healthPack.name} that restored ${healthPack.health * healthMultiplier} health.`);
         } else {
             //if incorrect, reduce health by 50 multiplied by the damage multiplier
             health -= 50 * damageMultiplier;

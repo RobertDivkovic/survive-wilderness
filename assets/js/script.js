@@ -3,6 +3,7 @@ document.getElementById('startGame').addEventListener('click', startGame);
 // arrays to track used events
 let usedObstacles = [];
 let usedEnemies = [];
+let lastEventWasWizard = false; // track if last event was wizard event
 
 
 function startGame() {
@@ -43,6 +44,7 @@ function startGame() {
     let currentTurn = 0;
     usedObstacles = []; // reset used obstacles
     usedEnemies = []; // reset used enemies
+    lastEventWasWizard = false; // reset the wizard event flag
     updateStatus(health, currentTurn, maxTurns);
     nextTurn(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
 }
@@ -58,13 +60,23 @@ function nextTurn(health, currentTurn, maxTurns, healthMultiplier, damageMultipl
         endGame(health);
         return;
     }
-    const eventType = Math.random();
+    let eventType;
+    if (lastEventWasWizard) {
+        // ensure the next event is not wizard
+        eventType = 0.3 + Math.random() * 0.7; // adjusting eventType to avoid wizard eveent
+    } else {
+        eventType = Math.random();
+    }
+
     if (eventType < 0.3) { // there is 30% cnance to stumble upon wizard event
         displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
+        lastEventWasWizard = true; // setting event as it happened
     } else if (eventType < 0.75) { // there is 45% chance of obstacle event (0.3 + 0.45 = 0.75)
         displayeObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
+        lastEventWasWizard = false; // event didn't happen
     } else { // the rest is 25% ov enemy event
         displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
+        lastEventWasWizard = false; // event didn't happen
     }
 }
 

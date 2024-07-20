@@ -1,5 +1,10 @@
 document.getElementById('startGame').addEventListener('click', startGame);
 
+// arrays to track used events
+let usedObstacles = [];
+let usedEnemies = [];
+
+
 function startGame() {
     const playerName = document.getElementById('playerName').value;
     const difficulty = document.getElementById('difficulty').value;
@@ -36,6 +41,8 @@ function startGame() {
             break;
     }
     let currentTurn = 0;
+    usedObstacles = []; // reset used obstacles
+    usedEnemies = []; // reset used enemies
     updateStatus(health, currentTurn, maxTurns);
     nextTurn(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
 }
@@ -280,7 +287,15 @@ function displayeObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, 
             ]
         }
     ];
-    const event = events[Math.floor(Math.random() * events.length)];
+    // filter out used obstacles
+    let availableEvents = events.filter((event, index) => !usedObstacles.includes(index));
+    if (availableEvents.length === 0) {
+        // reset usedObstales if all events have been used
+        usedObstacles = [];
+        availableEvents = events;
+    }
+
+    const event = availableEvents[Math.floor(Math.random() * availableEvents.length)];
     displayEvent(event, health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
 }
 
@@ -377,7 +392,16 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
             ]
         },
     ];
-    const enemy = enemies[Math.floor(Math.random() * enemies.length)];
+    // filter out used enemies
+    let availableEnemies = enemies.filter((enemy, index) => !usedEnemies.includes(index));
+    if (availableEnemies.lengts === 0) {
+        // reset usedEnemies if all events have been used
+        usedEnemies = [];
+        availableEnemies = enemies;
+    }
+
+    const enemy = availableEnemies[Math.floor(Math.random() * availableEnemies.length)];
+    usedEnemies.push(enemies.indexOf(enemy)); // trackking used enemy
     displayEvent(enemy, health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
 }
 
@@ -427,7 +451,7 @@ function displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, dam
             const healthPack = getRandomHealthPack();
             //increase health, considering the health pack and multiplier, ensuring it doesn't exceed 1000
             health = Math.min(1000, health + healthPack.health * healthMultiplier);
-            alert(`Corect! You recived a ${healthPack.name} that restored ${healthPack.health * healthMultiplier} health.`);
+            alert(`Correct! You recived a ${healthPack.name} that restored ${healthPack.health * healthMultiplier} health.`);
         } else {
             //if incorrect, reduce health by 50 multiplied by the damage multiplier
             health -= 50 * damageMultiplier;
@@ -449,7 +473,7 @@ function generateWizardQuestion() {
     const operation = operations[Math.floor(Math.random() * operations.length)];
     let question, answer;
 
-    switch (operations) {
+    switch (operation) {
         case '+':
             question = `${num1} + ${num2}`;
             answer = num1 + num2;
@@ -462,12 +486,12 @@ function generateWizardQuestion() {
             question = `${num1} * ${num2}`;
             answer = num1 * num2;
             break;
-        case '*':
+        case '/':
             question = `${num1} / ${num2}`;
             answer = Math.floor(num1 / num2); // round down and return largest integer
             break;
     }
-    return { question, answer};
+    return { question, answer };
 }
 
 function getRandomHealthPack() {

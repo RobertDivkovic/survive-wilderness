@@ -59,7 +59,7 @@ input, select, button {
 
 /*Event images*/
 .event-image {
-    width: 100%;
-    height: auto;
+    width: 75%;
+    height: 75%;
     margin-bottom: 15px;
 }

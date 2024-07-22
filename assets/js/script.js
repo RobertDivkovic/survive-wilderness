@@ -411,7 +411,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
         },
         {
             description: "As you are walking in woods, you can feel weird sensation that something is looking at you. You look above, and there, in tree branches you see bright orange snake, probably 10 meters long. It has poisonous fangs. What do you do?",
-            image: "/survive-wilderness/assets/images/venomous-serpant.png",
+            image: "/survive-wilderness/assets/images/venomous-serpent.png",
             options: [
                 { text: "Attack the serpent head-on.", damage: 40 * damageMultiplier, alert: "Attacking the serpent head-on resulted in a venomous bite, causing 40 damage." },
                 { text: "Use a ranged weapon.", damage: 0, alert: "You used a ranged weapon and defeated the serpent safely." },

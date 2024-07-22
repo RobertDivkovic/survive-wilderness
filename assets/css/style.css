@@ -103,3 +103,54 @@ input, select, button {
         margin-left: 10px;
     }
 }
+
+/* Media query: laptops and larger (992px and larger) */
+@media screen and (min-width: 992px) {
+
+    .container {
+        width: 75%;
+    }
+
+    input, select, button {
+        width: 75%;
+        font-size: 16px;
+    }
+
+    .status-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .playerHealth-bar {
+        width: 55%;
+    }
+
+    #turnCounter {
+        margin-left: 15px;
+    }
+}
+
+/* Media query: desktops and larger (1200px and larger) */
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 70%;
+    }
+
+    input, select, button {
+        width: 70%;
+        font-size: 20px;
+    }
+
+    .status-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .playerHealth-bar {
+        width: 50%;
+    }
+
+    #turnCounter {
+        margin-left: 25px;
+    }
+}

@@ -37,11 +37,20 @@ input, select, button {
     display: none;
 }
 
+/*Event images*/
+.event-image {
+    width: 66%;
+    height: 66%;
+    margin-bottom: 15px 15px;
+    flex-wrap: wrap;
+}
+
 .status-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 15px 0;
+    flex-wrap: wrap;
 }
 
 .playerHealth-bar {
@@ -67,12 +76,4 @@ input, select, button {
 #turnCounter {
     margin-left: 20px;
     color: chartreuse;
-}
-
-/*Event images*/
-.event-image {
-    width: 50%;
-    height: 50%;
-    margin-bottom: 15px;
-    border-radius: 50%;
 }

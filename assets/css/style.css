@@ -9,10 +9,11 @@ body {
     height: 100vh;
     background-color: rgb(43, 80, 51);
 }
-
+/* Make container elements wider */
 .container {
     text-align: center;
-    width: 75%;
+    width: 95%;
+    max-width: 1200px;
 }
 
 h1 {

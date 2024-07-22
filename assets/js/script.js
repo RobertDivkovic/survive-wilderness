@@ -86,7 +86,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
     const events = [
         {
             description: "As you walk through narrow path in forest, you stumble upon a fallen tree. This fallen tree is huge and covered in moss. What do you do?",
-            image: "../assets/images/fallen-tree.jpg",
+            image: "/survive-wilderness/assets/images/fallen-tree.jpg",
             options: [
                 { text: "Jump over the fallen tree.", damage: 20 * damageMultiplier, alert: "You slipped while jumping over the fallen tree and took 20 damage." },
                 { text: "Go around the fallen tree.", damage: 0, alert: "You safely went around the fallen tree without taking any damage." },
@@ -96,7 +96,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You can hear gurgling water nearby and you see a mighty river in front of you, it has strong currents and slippery banks. What do you do?",
-            image: "../assets/images/mighty-river.jpg",
+            image: "/survive-wilderness/assets/images/mighty-river.jpg",
             options: [
                 { text: "Swim across the river.", damage: 40 * damageMultiplier, alert: "You struggled against the strong currents and took 40 damage." },
                 { text: "Reinforce nearby bridge with rope and cross it.", damage: 0, alert: "You found a bridge and crossed the river safely." },
@@ -106,7 +106,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You went out into the clearing and saw something strange. Below you is steep canyon that is carved by river and has a lot of loose rocks. What do you do?",
-            image: "../assets/images/canyon.jpg",
+            image: "/survive-wilderness/assets/images/canyon.jpg",
             options: [
                 { text: "Climb down the canyon without equipment.", damage: 80 * damageMultiplier, alert: "Loose rocks made you fall while climbing down, taking 80 damage." },
                 { text: "Use parachute to go down.", damage: 80 * damageMultiplier, alert: "Strong winds crashed you on the side of canyon, dealing you 80 damage." },
@@ -116,7 +116,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "As you walk further, you feel like there isn’t much of air flow, like there is a wall in front of you. You see huge cliff before you. The cliff is high with jagged rocks below. What do you do?",
-            image: "../assets/images/cliff.jpg",
+            image: "/survive-wilderness/assets/images/cliff.jpg",
             options: [
                 { text: "Climb up the cliff using climbing pickaxe.", damage: 100 * damageMultiplier, alert: "You lost your grip while climbing up and took 100 damage." },
                 { text: "Take climbing gear from poor climbers skeleton nearby and climb up.", damage: 0, alert: "You found poor climbers skeleton, took his gear and climbed cliff safely." },
@@ -126,7 +126,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You feel stale air nearby and all of the sudden a colony of bats fly out of a huge hole from the ground. The cave is dark and dangerous. What do you do?",
-            image: "../assets/images/cave.jpg",
+            image: "/survive-wilderness/assets/images/cave.jpg",
             options: [
                 { text: "Enter the cave without a torch.", damage: 30 * damageMultiplier, alert: "You stumbled in the dark cave and took 30 damage." },
                 { text: "Light a torch before entering.", damage: 0, alert: "You lit a torch and entered the cave safely." },
@@ -136,7 +136,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "As you walk through forest you see extinguished fire, but the ashes are still warm. The camp has remnants of activity and scattered supplies. What do you do?",
-            image: "../assets/images/abandoned-camp.png",
+            image: "/survive-wilderness/assets/images/abandoned-camp.png",
             options: [
                 { text: "Rummage through the camp recklessly.", damage: 20 * damageMultiplier, alert: "Rummaging recklessly caused you to get injured on rusty nail, taking 20 damage." },
                 { text: "Search the camp cautiously without much noise.", damage: 0, alert: "You searched the camp cautiously and avoided injury." },
@@ -146,7 +146,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "Before you, you see mossy castle, and it seems to be abandoned. The castle is old, with collapsing walls, hidden traps and perhaps hidden treasure. What do you do?",
-            image: "../assets/images/abandoned-castle.jpg",
+            image: "/survive-wilderness/assets/images/abandoned-castle.jpg",
             options: [
                 { text: "Look for hidden treasure.", damage: 60 * damageMultiplier, alert: "Driven by lust, you explore hastily triggering trap, causing 60 damage." },
                 { text: "Investigate the castle room by room.", damage: 0, alert: "You carefully investigated the castle and avoided traps. Sadly you didn’t find anything interesting." },
@@ -156,7 +156,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "In the middle of night you hear scary sounds. You see graveyard and only way is through it. The graveyard is eerie with a lot of open graves and evil ghosts that seek revenge. What do you do?",
-            image: "../assets/images/graveyard.jpg",
+            image: "/survive-wilderness/assets/images/graveyard.jpg",
             options: [
                 { text: "Walk casually through the graveyard, trying to assert dominance over ghosts.", damage: 40 * damageMultiplier, alert: "Walking through the graveyard full of pride, trying to make ghost submissive caused ghosts to attack, taking 40 damage." },
                 { text: "Be respectful to evil ghosts and ask them kindly for a safe pass through.", damage: 0, alert: "You managed to calm down evil ghosts, and pass freely through graveyard." },
@@ -166,7 +166,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "Upon reaching misty and smelly swamp, you see old house in the middle of it. That is a witch house. The house is filled with magical traps and curses. What do you do?",
-            image: "../assets/images/witch-house.png",
+            image: "/survive-wilderness/assets/images/witch-house.png",
             options: [
                 { text: "Enter the house without protection.", damage: 50 * damageMultiplier, alert: "Entering without protection triggered traps, causing 50 damage." },
                 { text: "Use a protective charm before entering.", damage: 0, alert: "You used a protective charm that you found in your backpack and safely entered the house." },
@@ -176,7 +176,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You hear something rustle behind you. Weird silhouette approaches you, without speaking. It is a strange looking man, stranger appears suspicious and unpredictable. What do you do?",
-            image: "../assets/images/stranger.png",
+            image: "/survive-wilderness/assets/images/stranger.png",
             options: [
                 { text: "Confront the stranger.", damage: 40 * damageMultiplier, alert: "Confronting the stranger resulted in a fight, stranger called for help of his companions, causing 40 damage." },
                 { text: "Act like a mad lad, like you are out of your mind.", damage: 0, alert: "Stranger thought that he should avoid crazy people like you. You continue with your journey safely." },
@@ -186,7 +186,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "As you tread deeper into the forest, you encounter a murky swamp with treacherous mud and hidden dangers. What do you do?",
-            image: "../assets/images/swamp.jpg",
+            image: "/survive-wilderness/assets/images/swamp.jpg",
             options: [
                 { text: "Wade through the swamp directly.", damage: 30 * damageMultiplier, alert: "You got stuck in the mud and took 30 damage while trying to free yourself." },
                 { text: "Find a solid path and use a stick to check the ground.", damage: 0, alert: "You found a solid path and safely navigated through the swamp." },
@@ -196,7 +196,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You come across a dense patch of thorny bushes blocking your path. The thorns are sharp and can easily cause injury. What do you do?",
-            image: "../assets/images/thorny-bushes.png",
+            image: "/survive-wilderness/assets/images/thorny-bushes.png",
             options: [
                 { text: "Push through the bushes.", damage: 20 * damageMultiplier, alert: "You got scratched by the thorns and took 20 damage." },
                 { text: "Cut through the bushes with a machete.", damage: 0, alert: "You used a machete to safely cut through the bushes." },
@@ -206,7 +206,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You stumble upon a many ant colonies in your path. The ground is covered with dangerous ants. What do you do?",
-            image: "../assets/images/ant-colonies.png",
+            image: "/survive-wilderness/assets/images/ant-colonies.png",
             options: [
                 { text: "Run across ants.", damage: 40 * damageMultiplier, alert: "Even tho you ran fast, ants still bit you many times, taking 40 damage." },
                 { text: "Use a long stick to poke ant hills.", damage: 40 * damageMultiplier, alert: "Enraged ants bit you many times." },
@@ -216,7 +216,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You encounter an area filled with poisonous plants. The air is thick with toxic pollen. What do you do?",
-            image: "../assets/images/poisonous-plants.png",
+            image: "/survive-wilderness/assets/images/poisonous-plants.png",
             options: [
                 { text: "Walk through the plants normally.", damage: 40 * damageMultiplier, alert: "You inhaled the toxic pollen and took 40 damage." },
                 { text: "Cover your mouth and nose and move quickly.", damage: 0, alert: "You covered your mouth and nose and safely passed through the area." },
@@ -226,7 +226,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You find an old abandoned mine shaft. It looks unstable and dangerous. What do you do?",
-            image: "../assets/images/abandoned-mine.png",
+            image: "/survive-wilderness/assets/images/abandoned-mine.png",
             options: [
                 { text: "Walk through the mine without any support.", damage: 70 * damageMultiplier, alert: "The mine shaft collapsed on you, causing 70 damage." },
                 { text: "Use sturdy wooden beams to support your path.", damage: 0, alert: "You used wooden beams to safely navigate the mine." },
@@ -236,7 +236,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "As you journey through the forest, you suddenly find yourself surrounded by a spreading wildfire. The heat is intense and the smoke is choking. What do you do?",
-            image: "../assets/images/wildfire.png",
+            image: "/survive-wilderness/assets/images/wildfire.png",
             options: [
                 { text: "Run through the fire to the other side.", damage: 60 * damageMultiplier, alert: "You got burned while trying to run through the fire, taking 60 damage." },
                 { text: "Find a nearby river and stay low to avoid smoke.", damage: 0, alert: "You found a river and stayed low, safely avoiding the fire and smoke." },
@@ -246,7 +246,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You hear a rumbling sound and see a rockslide barreling down the mountain towards you. Large rocks and debris are crashing down. What do you do?",
-            image: "../assets/images/rockslide.png",
+            image: "/survive-wilderness/assets/images/rockslide.png",
             options: [
                 { text: "Run downhill away from the rockslide.", damage: 70 * damageMultiplier, alert: "Running downhill didn't save you, and you got hit by rocks, taking 70 damage." },
                 { text: "Find cover behind a large boulder.", damage: 0, alert: "You found cover behind a large boulder and safely avoided the rockslide." },
@@ -256,7 +256,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "The path ahead is overgrown with thick, thorny vines that seem to move on their own. They can easily ensnare and injure you. What do you do?",
-            image: "../assets/images/thorny-vines.png",
+            image: "/survive-wilderness/assets/images/thorny-vines.png",
             options: [
                 { text: "Walk through the vines quickly.", damage: 50 * damageMultiplier, alert: "The thorny vines ensnared and cut you, causing 50 damage." },
                 { text: "Carefully cut through the vines with a sharp blade.", damage: 0, alert: "You carefully cut through the vines and avoided injury." },
@@ -266,7 +266,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You come across an old, rickety bridge with obvious signs of booby traps. It looks like crossing could be perilous. What do you do?",
-            image: "../assets/images/booby-trapped-bridge.png",
+            image: "/survive-wilderness/assets/images/booby-trapped-bridge.png",
             options: [
                 { text: "Run quickly across the bridge.", damage: 60 * damageMultiplier, alert: "Running quickly triggered the traps, causing 60 damage." },
                 { text: "Disarm the traps and cross slowly.", damage: 0, alert: "You disarmed the traps and crossed the bridge safely." },
@@ -276,7 +276,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "While traversing a snowy mountain, you hear the ominous sound of an avalanche roaring down the slope towards you. What do you do?",
-            image: "../assets/images/avalanche.png",
+            image: "/survive-wilderness/assets/images/avalanche.png",
             options: [
                 { text: "Run downhill to escape the avalanche.", damage: 80 * damageMultiplier, alert: "Running downhill wasn't fast enough, and you got buried, taking 80 damage." },
                 { text: "Find a sturdy structure or overhang to shelter under.", damage: 0, alert: "You found a sturdy structure and safely sheltered from the avalanche." },
@@ -286,7 +286,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "A fierce lightning storm is approaching, and you are in an open field with no immediate shelter. What do you do?",
-            image: "../assets/images/lightning-storm.png",
+            image: "/survive-wilderness/assets/images/lightning-storm.png",
             options: [
                 { text: "Run to the nearest tree for shelter.", damage: 50 * damageMultiplier, alert: "You got struck by lightning while running to the tree, taking 50 damage." },
                 { text: "Lie flat on the ground away from tall objects.", damage: 0, alert: "You lay flat on the ground and avoided the lightning safely." },
@@ -296,7 +296,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You stumble upon a giant beehive in your path. The bees seem agitated and ready to attack. What do you do?",
-            image: "../assets/images/beehive.png",
+            image: "/survive-wilderness/assets/images/beehive.png",
             options: [
                 { text: "Throw a rock at the beehive.", damage: 30 * damageMultiplier, alert: "Throwing a rock angered the bees, and you got stung, taking 30 damage." },
                 { text: "Slowly back away and find an alternative route.", damage: 0, alert: "You backed away slowly and avoided the bees." },
@@ -306,7 +306,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You come across a frozen lake with a thin layer of ice. Crossing it could be dangerous. What do you do?",
-            image: "../assets/images/frozen-lake.png",
+            image: "/survive-wilderness/assets/images/frozen-lake.png",
             options: [
                 { text: "Run across the ice quickly.", damage: 60 * damageMultiplier, alert: "Running caused the ice to crack, and you fell in, taking 60 damage." },
                 { text: "Test the ice with a stick and move cautiously.", damage: 0, alert: "You tested the ice and moved cautiously, crossing safely." },
@@ -316,7 +316,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "A slow-moving lava flow blocks your path. The heat is intense, and the ground is unstable. What do you do?",
-            image: "../assets/images/lava-flow.png",
+            image: "/survive-wilderness/assets/images/lava-flow.png",
             options: [
                 { text: "Jump over the lava flow.", damage: 70 * damageMultiplier, alert: "You didn't make the jump and got burned, taking 70 damage." },
                 { text: "Find a path around the lava flow.", damage: 0, alert: "You found a path around the lava flow and safely navigated it." },
@@ -326,7 +326,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "A fierce sandstorm approaches, reducing visibility to zero and pelting you with sand. What do you do?",
-            image: "../assets/images/sandstorm.png",
+            image: "/survive-wilderness/assets/images/sandstorm.png",
             options: [
                 { text: "Walk through the sandstorm blindly.", damage: 50 * damageMultiplier, alert: "Walking through the sandstorm caused you to get lost and hurt, taking 50 damage." },
                 { text: "Cover your face and find shelter.", damage: 0, alert: "You covered your face and found shelter, avoiding the sandstorm." },
@@ -336,7 +336,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You discover ancient ruins with hidden traps and collapsing structures. They seem both intriguing and dangerous. What do you do?",
-            image: "../assets/images/ancient-ruins.png",
+            image: "/survive-wilderness/assets/images/ancient-ruins.png",
             options: [
                 { text: "Run through the ruins quickly.", damage: 40 * damageMultiplier, alert: "Running quickly triggered a trap, causing 40 damage." },
                 { text: "Move slowly and use a stick to probe for traps.", damage: 0, alert: "You moved slowly and probed for traps, avoiding damage." },
@@ -346,7 +346,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You find yourself enveloped in a dense fog, making it difficult to see more than a few feet ahead. What do you do?",
-            image: "../assets/images/dense-fog.png",
+            image: "/survive-wilderness/assets/images/dense-fog.png",
             options: [
                 { text: "Walk through the fog at a normal pace.", damage: 30 * damageMultiplier, alert: "Walking through the fog at a normal pace caused you to trip, taking 30 damage." },
                 { text: "Use a stick to feel your way and move slowly.", damage: 0, alert: "You used a stick to feel your way and safely navigated the fog." },
@@ -356,7 +356,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You come across what looks like solid ground but is actually hidden quicksand. It looks deceptive and dangerous. What do you do?",
-            image: "../assets/images/hidden-quicksand.png",
+            image: "/survive-wilderness/assets/images/hidden-quicksand.png",
             options: [
                 { text: "Walk through the area normally.", damage: 50 * damageMultiplier, alert: "You got stuck in the quicksand and took 50 damage while escaping." },
                 { text: "Use a long stick to test the ground and move cautiously.", damage: 0, alert: "You tested the ground with a stick and moved cautiously, avoiding the quicksand." },
@@ -366,7 +366,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "A volcanic eruption starts nearby, spewing ash and lava. The ground shakes, and the air is filled with toxic fumes. What do you do?",
-            image: "../assets/images/volcanic-eruption.png",
+            image: "/survive-wilderness/assets/images/volcanic-eruption.png",
             options: [
                 { text: "Run downhill to escape the lava.", damage: 80 * damageMultiplier, alert: "Running downhill wasn't fast enough, and you got caught by the lava, taking 80 damage." },
                 { text: "Find a cave or shelter to hide from the ash and lava.", damage: 0, alert: "You found a cave and sheltered safely from the eruption." },
@@ -376,7 +376,7 @@ function displayObstacleEvent(health, currentTurn, maxTurns, healthMultiplier, d
         },
         {
             description: "You are confronted by a wild animal, such as a bear or a wolf, that looks aggressive and ready to attack. What do you do?",
-            image: "../assets/images/wild-animal-attack.png",
+            image: "/survive-wilderness/assets/images/wild-animal-attack.png",
             options: [
                 { text: "Run away as fast as you can.", damage: 70 * damageMultiplier, alert: "Running away provoked the animal to attack, causing 70 damage." },
                 { text: "Use a deterrent like loud noise or pepper spray.", damage: 0, alert: "You used a deterrent and scared the animal away, avoiding damage." },
@@ -401,7 +401,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
     const enemies = [
         {
             description: "Even with a bright light of the day, you seem to barely see mystique creature. A dark, shapeless creature that lurks in the shadows and dark parts of the forest. What do you do?",
-            image: "../assets/images/shadow-beast.png",
+            image: "/survive-wilderness/assets/images/shadow-beast.png",
             options: [
                 { text: "Fight the Shadow Beast without a light source.", damage: 50 * damageMultiplier, alert: "You fought the Shadow Beast without a light source and took 50 damage." },
                 { text: "Use a torch or lantern to scare it away.", damage: 0, alert: "You used a torch to scare away the Shadow Beast and avoided damage." },
@@ -411,7 +411,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
         },
         {
             description: "As you are walking in woods, you can feel weird sensation that something is looking at you. You look above, and there, in tree branches you see bright orange snake, probably 10 meters long. It has poisonous fangs. What do you do?",
-            image: "../assets/images/venomous-serpant.png",
+            image: "/survive-wilderness/assets/images/venomous-serpant.png",
             options: [
                 { text: "Attack the serpent head-on.", damage: 40 * damageMultiplier, alert: "Attacking the serpent head-on resulted in a venomous bite, causing 40 damage." },
                 { text: "Use a ranged weapon.", damage: 0, alert: "You used a ranged weapon and defeated the serpent safely." },
@@ -421,7 +421,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
         },
         {
             description: "You can hear terrible howls in a distance, and they seem to get closer every second. Before you, there it is . A ghostly wolf that can phase in and out of reality. What do you do?",
-            image: "../assets/images/phantom-wolf.png",
+            image: "/survive-wilderness/assets/images/phantom-wolf.png",
             options: [
                 { text: "Fight the wolf with a magic silver sword.", damage: 30 * damageMultiplier, alert: "Fighting the wolf directly resulted in injuries, causing 30 damage." },
                 { text: "Use a magic spell to banish it.", damage: 0, alert: "You used a magic spell and banished the Phantom Wolf to underground realm safely." },
@@ -431,7 +431,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
         },
         {
             description: "Through binocular you see a large green ogre with spiky thorns covering its back is walking in your direction. He will be here soon. You cannon escape it. What do you do?",
-            image: "../assets/images/thornback-ogre.png",
+            image: "/survive-wilderness/assets/images/thornback-ogre.png",
             options: [
                 { text: "Engage the ogre in close combat.", damage: 60 * damageMultiplier, alert: "Engaging the ogre in close combat resulted in serious injuries, causing 60 damage." },
                 { text: "Set a trap.", damage: 0, alert: "You set a trap and safely immobilize the Thornback Ogre." },
@@ -441,7 +441,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
         },
         {
             description: "As you walk down the path, you hear someone crying. You think it is a lost child and want to help it but, you find something terrifying. A ghostly figure whose scream can paralyze its victims. What do you do?",
-            image: "../assets/images/banshee.jpg",
+            image: "/survive-wilderness/assets/images/banshee.jpg",
             options: [
                 { text: "Confront the banshee without ear protection.", damage: 50 * damageMultiplier, alert: "Confronting the banshee without ear protection paralyzed you, causing 50 damage." },
                 { text: "Use earplugs and hit banshee with a branch.", damage: 0, alert: "You used earplugs and confronted the banshee safely." },
@@ -451,7 +451,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
         },
         {
             description: "Down the path you see something that resembles a green bush, but realise that it’s a blob of slime that can dissolve anything it touches. What do you do?",
-            image: "../assets/images/acidic-slime.png",
+            image: "/survive-wilderness/assets/images/acidic-slime.png",
             options: [
                 { text: "Fight the slime directly.", damage: 35 * damageMultiplier, alert: "Fighting the slime directly resulted in burns, causing 35 damage." },
                 { text: "Use freezing magic to solidify it.", damage: 0, alert: "You used freezing magic and safely solidified the Acidic Slime." },
@@ -461,7 +461,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
         },
         {
             description: "The section of the forest that you are walking right now is scorched. You see a small dragon that breathes fire. Fun fact about dragons: a small dragon in dragon world is still 12 meters high and weights around 10 tonnes. What do you do?",
-            image: "../assets/images/inferno-fury.png",
+            image: "/survive-wilderness/assets/images/inferno-fury.png",
             options: [
                 { text: "Attack the dragon without fire protection.", damage: 100 * damageMultiplier, alert: "Attacking the Fury without fire protection resulted in burns, causing 100 damage." },
                 { text: "Use a fire-resistant shield, frozen sword and magic spell to banish it.", damage: 0, alert: "You used a fire-resistant shield, frozen sword and spell and safely banish the Inferno Fury to mountains." },
@@ -471,7 +471,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
         },
         {
             description: "Near a path that you are walking is a huge cave entrance. A swarm of bats that drain blood from their victims fly right at you. What do you do?",
-            image: "../assets/images/bloodsucking-bat-swarm.png",
+            image: "/survive-wilderness/assets/images/bloodsucking-bat-swarm.png",
             options: [
                 { text: "Swat at the bats.", damage: 25 * damageMultiplier, alert: "Swatting at the bats aggravated them, causing 25 damage." },
                 { text: "Use a bat repellant and light a fire.", damage: 0, alert: "You used a repellant and lit a fire and the bats fled safely." },
@@ -481,7 +481,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
         },
         {
             description: "As you are resting and gathering energy for continuation of your journey on a nearby pile of boulders, suddenly boulders start moving and you realise that you were sitting on a stone golem covered in sharp spikes. Fun fact: stone gollems are very slow and weight up to 30 tonnes. What do you do?",
-            image: "../assets/images/spiked-golem.png",
+            image: "/survive-wilderness/assets/images/spiked-golem.png",
             options: [
                 { text: "Attack the golem with sword and magic spell.", damage: 50 * damageMultiplier, alert: "Attacking the golem with sword and spells didn’t work and resulted in injuries, causing 50 damage." },
                 { text: "Use a hammer to break its legs and spikes.", damage: 0, alert: "You used a hammer and safely broke the golem's legs and spikes so it can’t harm anyone anymore." },
@@ -491,7 +491,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
         },
         {
             description: "In a colder biome, you stumble on a frozen beast. A towering giant that emanates a freezing aura. What do you do?",
-            image: "../assets/images/frost-giant.png",
+            image: "/survive-wilderness/assets/images/frost-giant.png",
             options: [
                 { text: "Engage the giant without warm clothing or heat sources.", damage: 55 * damageMultiplier, alert: "Engaging the giant without protection resulted in frostbite, causing 55 damage." },
                 { text: "Use fire magic and a heat source to counter the cold beast.", damage: 0, alert: "You used fire magic and torch and safely countered the Frost Giant's cold aura." },

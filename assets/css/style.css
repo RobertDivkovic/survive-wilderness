@@ -8,7 +8,8 @@ body {
     align-items: center;
     height: 100vh;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(60,181,43,1) 50%, rgba(27,50,26,1) 100%);
+    /* Background gradient */
+    background: linear-gradient(90deg, rgba(44,52,45,1) 0%, rgba(55,152,41,1) 50%, rgba(44,52,45,1) 100%);
 }
 /* Make container elements wider */
 .container {
@@ -33,11 +34,18 @@ input, select, button {
     padding: 15px;
     font-size: 16px;
 }
+
+input, select {
+    width: auto;
+    padding: 5px 10px;
+}
+
 /* Hover button */
 button {
     background-color: #95702184;
     color: white;
     border: none;
+    padding: 5px 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -99,7 +107,8 @@ button:hover {
     }
 
     input, select, button {
-        width: 80%;
+        width: auto;
+        padding: 5px 10px;
         font-size: 16px;
     }
 
@@ -125,7 +134,8 @@ button:hover {
     }
 
     input, select, button {
-        width: 75%;
+        width: auto;
+        padding: 5px 10px;
         font-size: 16px;
     }
 
@@ -150,7 +160,8 @@ button:hover {
     }
 
     input, select, button {
-        width: 70%;
+        width: auto;
+        padding: 5px 10px;
         font-size: 20px;
     }
 

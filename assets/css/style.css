@@ -53,8 +53,15 @@ input, select, button {
     width: 100%;
 }
 
+#playerNameDisplay {
+    color: rgb(235, 194, 15);
+    font-weight: 800;
+    
+}
+
 #turnCounter {
     margin-left: 20px;
+    color: chartreuse;
 }
 
 /*Event images*/

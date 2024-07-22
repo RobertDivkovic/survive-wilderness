@@ -63,17 +63,43 @@ input, select, button {
 
 #playerHealthBar-fill {
     height: 100%;
-    background-color: red;
+    background-color: rgb(255, 5, 5);
     width: 100%;
 }
 
 #playerNameDisplay {
-    color: rgb(235, 194, 15);
+    color: rgb(255, 255, 255);
     font-weight: 800;
-    
 }
 
 #turnCounter {
     margin-left: 20px;
-    color: chartreuse;
+    color: rgb(1, 251, 1);
+}
+
+
+/* Media query: tablets and larger (768px and larger) */
+@media screen and (min-width: 768px) {
+
+    .container {
+        width: 80%;
+    }
+
+    input, select, button {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .status-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .playerHealth-bar {
+        width: 60%;
+    }
+
+    #turnCounter {
+        margin-left: 10px;
+    }
 }

@@ -541,8 +541,9 @@ function displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, dam
     //generate a new wizard question
     const wizardQuestion = generateWizardQuestion();
     const eventArea = document.getElementById('eventArea');
-    //set the inner HTML of 'eventArea' to display the wizard's question
-    eventArea.innerHTML = `<p>The Wandering Wizard approaches you and asks: "${wizardQuestion.question}"</p>`;
+    const wizardImage = "/survive-wilderness/assets/images/wizardQuestion.jpg";
+    //set the inner HTML of 'eventArea' to display the wizard's question and image
+    eventArea.innerHTML = `<img src="${wizardImage}" alt="Wizard Image" class="event-image"><p>The Wandering Wizard approaches you and asks: "${wizardQuestion.question}"</p>`;
 
     //ccreate an input element for the player's answer
     const input = document.createElement('input');

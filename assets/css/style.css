@@ -9,7 +9,7 @@ body {
     height: 100vh;
     background: rgb(2,0,36);
     /* Background gradient */
-    background: linear-gradient(90deg, rgba(44,52,45,1) 0%, rgb(46, 116, 35) 50%, rgba(44,52,45,1) 100%);
+    background: linear-gradient(90deg, rgba(44,52,45,1) 0%, rgb(83, 54, 13) 50%, rgba(44,52,45,1) 100%);
 }
 /* Make container elements wider */
 .container {
@@ -65,6 +65,14 @@ button:hover {
     height: 66%;
     margin-bottom: 15px 15px;
     flex-wrap: wrap;
+}
+
+/* Style for event descriptions */
+.event-description {
+    color: rgb(78, 46, 6);
+    font-family: 'Georgia', 'Palation Linotype';
+    font-size: 16px;
+    margin: 10px 0;
 }
 
 .status-bar {

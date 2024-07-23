@@ -516,7 +516,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
 function displayEvent(event, health, currentTurn, maxTurns, healthMultiplier, damageMultiplier) {
     const eventArea = document.getElementById('eventArea');
     //set the inner HTML of 'eventArea' to display the event description and image with a class
-    eventArea.innerHTML = `<img src="${event.image}" alt="Event Image" class="event-image"><p>${event.description}</p>`;
+    eventArea.innerHTML = `<img src="${event.image}" alt="Event Image" class="event-image"><p class="event-description">${event.description}</p>`;
     //iterate through each option in the event options array
     event.options.forEach((option, index) => {
         // create a new button element

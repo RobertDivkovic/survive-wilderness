@@ -9,7 +9,7 @@ body {
     height: 100vh;
     background: rgb(2,0,36);
     /* Background gradient */
-    background: linear-gradient(90deg, rgba(44,52,45,1) 0%, rgba(55,152,41,1) 50%, rgba(44,52,45,1) 100%);
+    background: linear-gradient(90deg, rgba(44,52,45,1) 0%, rgb(46, 116, 35) 50%, rgba(44,52,45,1) 100%);
 }
 /* Make container elements wider */
 .container {
@@ -42,9 +42,9 @@ input, select {
 
 /* Hover button */
 button {
-    background-color: #af2020;
+    background-color: #cabd0b;
     border-style: double;
-    color: rgb(151, 101, 39);
+    color: rgb(78, 46, 6);
     border: double;
     padding: 5px 10px;
     cursor: pointer;
@@ -52,7 +52,7 @@ button {
 }
 
 button:hover {
-    background-color: hsl(251, 56%, 42%);
+    background-color: hsl(118, 96%, 50%);
 }
 
 .hidden {

@@ -42,16 +42,17 @@ input, select {
 
 /* Hover button */
 button {
-    background-color: #95702184;
-    color: white;
-    border: none;
+    background-color: #af2020;
+    border-style: double;
+    color: rgb(151, 101, 39);
+    border: double;
     padding: 5px 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #1e9e2f28;
+    background-color: hsl(251, 56%, 42%);
 }
 
 .hidden {

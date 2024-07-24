@@ -527,6 +527,12 @@ function displayEvent(event, health, currentTurn, maxTurns, healthMultiplier, da
             health -= option.damage;
             //show an alert with the option text and the damage caused if any
             alert(option.alert);
+
+            // check if health is below 200 and show alert
+            if (health < 200) {
+                alert("Warning: Your health is below 200. Be careful!");
+            }
+
             currentTurn++;
             updateStatus(health, currentTurn, maxTurns);
             nextTurn(health, currentTurn, maxTurns, healthMultiplier, damageMultiplier);
@@ -566,6 +572,12 @@ function displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, dam
             health -= 50 * damageMultiplier;
             alert(`Wrong answer! The wizard scolds you and you lose 50 health.`);
         }
+
+        // check if health is below 200 and show alert
+        if (health < 200) {
+            alert("Warning: Your health is below 200. Be careful!");
+        }
+        
         currentTurn++;
         updateStatus(health, currentTurn, maxTurns);
         //proceed to the next turn with updated values

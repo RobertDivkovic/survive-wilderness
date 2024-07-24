@@ -141,6 +141,20 @@ button:hover {
     flex-wrap: wrap;
 }
 
+/* Frame style for dynamically created images */
+
+.framed {
+    border: 5px solid bisque;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+}
+
+
 /* Style for event descriptions */
 .event-description {
     color: bisque;
@@ -156,22 +170,7 @@ button:hover {
     margin: 15px 0;
     flex-wrap: wrap;
 }
-/*
-.playerHealth-bar {
-    width: 50%;
-    height: 30px;
-    background-color: red;
-    border: 1px solid black;
-    border: double;
-    position: relative;
-}
 
-#playerHealthBar-fill {
-    height: 100%;
-    background-color: rgb(255, 5, 5);
-    width: 100%;
-}
-*/
 #playerNameDisplay {
     color: bisque;
     font-weight: 800;
@@ -184,7 +183,6 @@ button:hover {
     color: bisque;
     font-size: 20px;
 }
-
 
 /* Media query: tablets and larger (768px and larger) */
 @media screen and (min-width: 768px) {

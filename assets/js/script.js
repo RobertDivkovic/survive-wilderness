@@ -1114,7 +1114,7 @@ function displayEnemyEvent(health, currentTurn, maxTurns, healthMultiplier, dama
 function displayEvent(event, health, currentTurn, maxTurns, healthMultiplier, damageMultiplier) {
     const eventArea = document.getElementById('eventArea');
     //set the inner HTML of 'eventArea' to display the event description and image with a class
-    eventArea.innerHTML = `<img src="${event.image}" alt="Event Image" class="event-image"><p class="event-description">${event.description}</p>`;
+    eventArea.innerHTML = `<img src="${event.image}" alt="Event Image" class="event-image framed"><p class="event-description">${event.description}</p>`;
     //iterate through each option in the event options array
     event.options.forEach((option, index) => {
         // create a new button element
@@ -1147,7 +1147,7 @@ function displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, dam
     const eventArea = document.getElementById('eventArea');
     const wizardImage = "/survive-wilderness/assets/images/wizard.jpg";
     //set the inner HTML of 'eventArea' to display the wizard's question and image
-    eventArea.innerHTML = `<img src="${wizardImage}" alt="Wizard Image" class="event-image"><p class="event-description">The Wandering Wizard approaches you and asks: "${wizardQuestion.question}"</p>`;
+    eventArea.innerHTML = `<img src="${wizardImage}" alt="Wizard Image" class="event-image framed"><p class="event-description">The Wandering Wizard approaches you and asks: "${wizardQuestion.question}"</p>`;
 
     //ccreate an input element for the player's answer
     const input = document.createElement('input');

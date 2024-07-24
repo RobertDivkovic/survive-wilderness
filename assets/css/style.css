@@ -29,6 +29,31 @@ h1 {
     color: bisque;
 }
 
+/* Numerical health display styles */
+#healthValue {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4d4d;
+    /* Bright red color for health display */
+    text-shadow: 1px 1px 2px #000;
+    /* Adding a subtle shadow for better visibility */
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ff4d4d;
+    display: inline-block;
+}
+
+/* Adjusting health container for better alignment */
+#healthContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
 /* Adding some styles for the game area when it's hidden */
 .game-area.hidden {
     display: none;
@@ -131,7 +156,7 @@ button:hover {
     margin: 15px 0;
     flex-wrap: wrap;
 }
-
+/*
 .playerHealth-bar {
     width: 50%;
     height: 30px;
@@ -146,7 +171,7 @@ button:hover {
     background-color: rgb(255, 5, 5);
     width: 100%;
 }
-
+*/
 #playerNameDisplay {
     color: bisque;
     font-weight: 800;

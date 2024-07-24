@@ -7,15 +7,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: rgb(2,0,36);
+    background: rgb(2, 0, 36);
     /* Background gradient */
-    background: linear-gradient(90deg, rgba(44,52,45,1) 0%, rgb(83, 54, 13) 50%, rgba(44,52,45,1) 100%);
+    background: linear-gradient(90deg, rgba(44, 52, 45, 1) 0%, rgb(83, 54, 13) 50%, rgba(44, 52, 45, 1) 100%);
 }
+
 /* Make container elements wider */
 .container {
     text-align: center;
     width: 95%;
     max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -25,19 +29,64 @@ h1 {
     color: bisque;
 }
 
-.game-intro, .game-area {
+/* Adding some styles for the game area when it's hidden */
+.game-area.hidden {
+    display: none;
+}
+
+.game-intro,
+.game-area {
     margin-top: 25px;
 }
 
-input, select, button {
+input,
+select,
+button {
     margin: 15px;
     padding: 15px;
     font-size: 16px;
 }
 
-input, select {
+input,
+select {
     width: auto;
     padding: 5px 10px;
+}
+
+/* Game introduction styles */
+.game-intro {
+    background-color: rgba(242, 226, 226, 0.1);
+    border: 2px solid bisque;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    color: bisque;
+}
+
+.game-intro p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#playerName {
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    background-color: rgba(242, 226, 226, 0.555);
+    color: rgb(2, 2, 2);
+    font-weight: 800;
+}
+
+#difficulty {
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid bisque;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
 }
 
 /* Hover button */
@@ -119,7 +168,9 @@ button:hover {
         width: 80%;
     }
 
-    input, select, button {
+    input,
+    select,
+    button {
         width: auto;
         padding: 5px 10px;
         font-size: 16px;
@@ -146,7 +197,9 @@ button:hover {
         width: 75%;
     }
 
-    input, select, button {
+    input,
+    select,
+    button {
         width: auto;
         padding: 5px 10px;
         font-size: 16px;
@@ -172,7 +225,9 @@ button:hover {
         width: 70%;
     }
 
-    input, select, button {
+    input,
+    select,
+    button {
         width: auto;
         padding: 5px 10px;
         font-size: 20px;

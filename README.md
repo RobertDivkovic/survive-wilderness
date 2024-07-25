@@ -163,7 +163,7 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
   - **Font:** Bold and clear font to stand out on the interface.
   - **Position:** Placed prominently near the top of the game area for easy visibility.
 - **Screenshots:**
-  - ![Turn Counter](/survive-wilderness/docs/images/turncounter.png)
+  - ![Turn Counter](/docs/images/turncounter.png)
 
 ##### Event Area
 - **Description:**
@@ -174,7 +174,7 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
   - **Font:** Clear and legible font with appropriate size for reading long paragraphs.
   - **Borders:** Subtle borders to separate the event text from other elements.
 - **Screenshots:**
-  - ![Event Area](/survive-wilderness/docs/images/eventarea.png)
+  - ![Event Area](/docs/images/eventarea.png)
 
 ##### Decision Buttons
 - **Description:**
@@ -186,7 +186,7 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
   - **Click Effects:** Brief animations to provide feedback on button presses.
   - **Position:** Aligned centrally or contextually within the event area.
 - **Screenshots:**
-  - ![Decision Buttons](/survive-wilderness/docs/images/decisionbuttons.png)
+  - ![Decision Buttons](/docs/images/decisionbuttons.png)
 
 ##### Reset Button
 - **Description:**
@@ -196,7 +196,7 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
   - **Font:** Bold and clear to indicate its critical function.
   - **Position:** Placed conveniently within the game interface.
 - **Screenshots:**
-  - ![Reset Button](/survive-wilderness/docs/images/reset.png)
+  - ![Reset Button](/docs/images/reset.png)
 
 ### Visual and Interaction Design
 

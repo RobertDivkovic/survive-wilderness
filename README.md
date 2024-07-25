@@ -324,6 +324,9 @@ Chrome Dev Tools was used throughout the development of the project to test resp
 - Nest Hub
 - Nest Hub Max
 
+### Lighthouse
+- ![Running through Lighthouse](/docs/images/lighthouse.png)
+
 ### Validator
 
 - [HTML Validator](https://validator.w3.org/)

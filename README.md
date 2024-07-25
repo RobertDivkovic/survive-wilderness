@@ -25,9 +25,19 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
 
 "Escape the Wilderness" is an interactive survival game where players face various challenges in the wilderness. The game is designed to be engaging and entertaining, providing users with an immersive experience. Players start by entering their name and selecting a difficulty level, and then navigate through a series of events that test their survival skills.
 
-## User Experience (UX)
+# UX - User Experience Design
 
-### Strategy Plane
+A user experience designer, Jesse James Garrett, introduced five UX design elements in his book *The Elements of User Experience*. In the book, he explains the steps of user experience projects and what UX designers should consider at each stage. This is where most of my planning process steps came from.
+
+The 5 planes of UX are as below:
+
+- **The Strategy Plane**
+- **The Scope Plane**
+- **The Structure Plane**
+- **The Skeleton Plane**
+- **The Surface Plane**
+
+## Strategy Plane
 
 #### Creator Goals
 - Provide an engaging and interactive game experience.
@@ -41,7 +51,7 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
 - As a player, I want to see my health status and progress throughout the game.
 - As a player, I want to be able to reset the game and play again.
 
-### Scope Plane
+## Scope Plane
 
 #### Features Implemented at Launch
 - **Home Page:** Introduction to the game and starting interface.
@@ -53,12 +63,12 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
 - **Achievements:** Unlockable achievements for completing specific challenges.
 - **Multiplayer Mode:** Option to play with friends online.
 
-### Structure Plane
+## Structure Plane
 - **Home Page:** Introduction, player name input, difficulty selection, and start button.
 - **Game Interface:** Turn counter, event area, and decision buttons.
 - **Reset Button:** Allows players to reset the game and start over.
 
-### Skeleton Plane
+## Skeleton Plane
 
 #### Layout Design
 
@@ -314,6 +324,30 @@ Chrome Dev Tools was used throughout the development of the project to test resp
 - Nest Hub
 - Nest Hub Max
 
+### Validator
+
+- [HTML Validator](https://validator.w3.org/)
+
+- 0 Error
+- 0 warnings
+
+- ![HTML Validator - NoError](/docs/images/HTMLvalidator.png)
+
+- [CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+- 0 Errors
+- 0 warnings
+
+- ![CSS Validator -NoError](/docs/images/CSSvalidator.png)
+
+- [Java Script Validator](https://jshint.com/)
+
+- 0 Errors
+- 0 warnings
+
+- ![Java Script Validator -NoError](/docs/images/JavaScriptvalidator.png)
+
+
 ## Deployment
 
 The main branch of this repository contains the latest version of the project and has been used for deployment.
@@ -376,5 +410,12 @@ The main branch of this repository contains the latest version of the project an
 
 - **Fonts:** Fonts used in the game were sourced from Google Fonts.
 - **Libraries:** FontAwesome for icons.
+
+Code :
+- Inspiration
+- [Code Institute, Love Maths](https://github.com/RobertDivkovic/love-maths)
+- Inspiration
+- [Stack Overflow] (https://stackoverflow.com/)
+
 
 Thank you for playing "Escape the Wilderness"! Enjoy your adventure!

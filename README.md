@@ -55,7 +55,7 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
 
 ### Structure Plane
 - **Home Page:** Introduction, player name input, difficulty selection, and start button.
-- **Game Interface:** Health bar, turn counter, event area, and decision buttons.
+- **Game Interface:** Turn counter, event area, and decision buttons.
 - **Reset Button:** Allows players to reset the game and start over.
 
 ### Skeleton Plane
@@ -313,3 +313,68 @@ Chrome Dev Tools was used throughout the development of the project to test resp
 - Samsung Galaxy A51/71
 - Nest Hub
 - Nest Hub Max
+
+## Deployment
+
+The main branch of this repository contains the latest version of the project and has been used for deployment.
+
+### Steps for Deployment
+
+1. **Using the Template:**
+   - Click the "Use this template" button on the repository page.
+   - Provide a name and description for your new repository.
+
+2. **Cloning the Repository:**
+   - Open your preferred IDE and log into your account.
+   - Click the "New Workspace" button (or equivalent for your IDE).
+   - Create a workspace by cloning your project repository:
+     - From your repository page, click the "Code" button.
+     - In the "Clone" section, copy the HTTPS URL for the repository.
+     - Paste the URL into the designated area in your IDE to create a clone.
+
+3. **Deploying on GitHub Pages:**
+   - Navigate to your repository settings on GitHub.
+   - Scroll down to the "GitHub Pages" section.
+   - Under "Source", select the branch you want to deploy (e.g., `main`).
+   - Click "Save".
+   - Your site will be deployed at `https://robertdivkovic.github.io/survive-wilderness/`.
+
+### Forking the Repository
+
+1. **Forking:**
+   - Navigate to the original repository you want to fork.
+   - Click the "Fork" button in the upper right corner of the repository page.
+   - Provide a name for your forked repository.
+   - Click "Create fork".
+
+2. **Making Changes:**
+   - Clone the forked repository to your local machine.
+   - Make your desired changes in your local development environment.
+   - Push the changes back to your forked repository on GitHub.
+
+3. **Pull Requests:**
+   - If you want to contribute back to the original repository, create a pull request.
+   - Navigate to the original repository and click "New Pull Request".
+   - Provide a description of the changes you made and submit the pull request for review.
+
+## Credits
+
+- **Content:** All game content and logic were developed by Robert Divkovic.
+- **Images:** Most of the images used in the game were sourced from AI image generator: [Canva](https://www.canva.com/)
+
+- **Other Images:**
+  1. Fallen Tree: [Pexels](https://www.pexels.com/photo/trees-and-rocks-covered-in-moss-9902552/)
+  2. Mighty River: [Pexels](https://www.pexels.com/photo/river-between-trees-2438/)
+  3. Canyon: [Pexels](https://www.pexels.com/photo/waterfall-in-mountainous-terrain-with-steep-slopes-5668668/)
+  4. Cliff: [Pexels](https://www.pexels.com/photo/photography-of-person-on-green-mountain-691034/)
+  5. Cave: [Pexels](https://www.pexels.com/photo/green-moss-on-trees-and-rock-formation-near-a-cave-4589108/)
+  6. Abandoned Castle: [Pexels](https://www.pexels.com/photo/ruins-of-a-castle-in-a-jungle-overgrown-with-bushes-13074007/)
+  7. Graveyard: [Pexels](https://www.pexels.com/photo/old-cemetery-with-bare-trees-6495744/)
+  8. Wailing Banshee: [Pixabay](https://pixabay.com/illustrations/banshee-horror-wailing-woman-8780806/)
+  9. Wizard: [DeepAI](https://deepai.org/)
+
+
+- **Fonts:** Fonts used in the game were sourced from Google Fonts.
+- **Libraries:** FontAwesome for icons.
+
+Thank you for playing "Escape the Wilderness"! Enjoy your adventure!

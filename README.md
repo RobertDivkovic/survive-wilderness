@@ -81,9 +81,6 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
 
 ###### Game Area
 - **Elements:**
-  - **Health Bar:**
-    - Visual representation of player health.
-    - Dynamic updates based on player decisions.
   - **Turn Counter:**
     - Displays the current turn and maximum turns allowed.
   - **Event Area:**
@@ -95,7 +92,6 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
   - **Reset Button:**
     - Button to reset the game to its initial state, allowing the player to start over.
 - **Styles:**
-  - Health bar with a color gradient to visually represent health levels.
   - Turn counter styled to be prominent and easily readable.
   - Event description area with a clear, readable font and appropriate background for contrast.
   - Decision buttons styled with consistent colors, hover effects, and click animations.
@@ -147,3 +143,106 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
 - **Typography:**
   - Consistent use of fonts across the site for a unified look and feel.
   - Font sizes and weights adjusted for headings, subheadings, and body text to create a clear visual hierarchy.
+
+## The Surface Plane
+
+### Features Present Across the Project
+
+#### Navigation Bar
+- **Description:**
+  - Not applicable for this project as it is a single-page application.
+  - All navigation occurs within the game interface itself.
+
+#### Game Interface
+
+##### Turn Counter
+- **Description:**
+  - Displays the current turn and the maximum number of turns allowed.
+- **Styles:**
+  - **Colors:** Contrasting background and text colors to ensure readability.
+  - **Font:** Bold and clear font to stand out on the interface.
+  - **Position:** Placed prominently near the top of the game area for easy visibility.
+- **Screenshots:**
+  - ![Turn Counter](/survive-wilderness/docs/images/turncounter.png)
+
+##### Event Area
+- **Description:**
+  - Displays the current event or scenario that the player must respond to.
+  - Provides context and options for the player to choose from.
+- **Styles:**
+  - **Colors:** Neutral background with dark text for high readability.
+  - **Font:** Clear and legible font with appropriate size for reading long paragraphs.
+  - **Borders:** Subtle borders to separate the event text from other elements.
+- **Screenshots:**
+  - ![Event Area](/survive-wilderness/docs/images/eventarea.png)
+
+##### Decision Buttons
+- **Description:**
+  - Interactive buttons allowing the player to make decisions that affect the game state.
+  - Each button represents a possible action or response to the current event.
+- **Styles:**
+  - **Colors:** Primary colors that stand out against the background.
+  - **Hover Effects:** Slight color changes and shadows to indicate interactivity.
+  - **Click Effects:** Brief animations to provide feedback on button presses.
+  - **Position:** Aligned centrally or contextually within the event area.
+- **Screenshots:**
+  - ![Decision Buttons](/survive-wilderness/docs/images/decisionbuttons.png)
+
+##### Reset Button
+- **Description:**
+  - Allows players to reset the game and start over from the beginning.
+- **Styles:**
+  - **Colors:** Distinct color to differentiate from other buttons.
+  - **Font:** Bold and clear to indicate its critical function.
+  - **Position:** Placed conveniently within the game interface.
+- **Screenshots:**
+  - ![Reset Button](/survive-wilderness/docs/images/reset.png)
+
+### Visual and Interaction Design
+
+##### Color Scheme
+- **Main Colors:** 
+  - **Background:** #FFFFFF (white) for a clean and simple look.
+  - **Primary Text:** #292828 (dark gray) for high readability.
+  - **Accent Colors:** #7D481A (brown), #544F4F (gray), #87603C (light brown), and #C59C3D (gold) for thematic consistency.
+- **Gradient Backgrounds:**
+  - Used for sections such as the event area to provide depth and visual interest.
+- **Examples:**
+  - ![Gradient Background]()
+
+##### Typography
+- **Fonts:**
+  - **Primary Font:** Verdana, Geneva, Tahoma, sans-serif for all text, providing a clean and modern appearance.
+  - **Font Styles:** Consistent use of font weights and sizes for headings, subheadings, and body text to create a clear visual hierarchy.
+- **Examples:**
+  - ![Typography]()
+
+##### Imagery
+- **Event Illustrations:**
+  - High-quality images that illustrate the current events, enhancing the narrative and engagement.
+- **Background Decorations:**
+  - Subtle background images to add texture and context to the game interface without distracting from the main content.
+- **Scaling:**
+  - Images scale appropriately on different screen sizes to maintain quality and responsiveness.
+- **Examples:**
+  - ![Event Illustration]()
+  - ![Background Decoration]()
+
+##### Responsiveness
+- **Layout Adjustments:**
+  - Use of media queries to adjust the layout for various devices, ensuring that all game elements are accessible and visually appealing on tablets, laptops, and desktops.
+- **Flexible Grid System:**
+  - Ensures that images and text sections are well-organized and maintain their layout integrity across different screen sizes.
+- **Examples:**
+  - ![Responsive Layout]()
+
+##### Hover and Click Effects
+- **Hover Effects:**
+  - Subtle changes in color and shadow on interactive elements to indicate interactivity.
+- **Click Effects:**
+  - Brief animations or changes in button appearance to provide immediate feedback on user actions.
+- **Examples:**
+  - ![Hover Effect]()
+  - ![Click Effect]()
+
+This detailed Surface Plane section ensures that the visual and interactive elements of the "Escape the Wilderness" game are cohesive, engaging, and accessible across various devices and screen sizes.

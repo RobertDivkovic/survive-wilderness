@@ -1121,9 +1121,9 @@ function displayEvent(event, health, currentTurn, maxTurns, healthMultiplier, da
         button.innerText = option.text;
         button.addEventListener('click', () => {
             //decrease health by the option's damage value
-            health -= option.damage;
+            health -= actual.damage;
             //show an alert with the option text and the damage caused if any
-            alert(option.alert);
+            alert(option.text + (actualDamage > 0 ? ` and took ${actualDamage} damage.` : " was safe."));
 
             // check if health is below 200 and show alert
             if (health < 200) {
@@ -1148,7 +1148,7 @@ function displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, dam
     //set the inner HTML of 'eventArea' to display the wizard's question and image
     eventArea.innerHTML = `<img src="${wizardImage}" alt="Wizard Image" class="event-image framed"><p class="event-description">The Wandering Wizard approaches you and asks: "${wizardQuestion.question}"</p>`;
 
-    //ccreate an input element for the player's answer
+    //create an input element for the player's answer
     const input = document.createElement('input');
     input.type = 'number';
     input.placeholder = 'Your answer';
@@ -1166,8 +1166,9 @@ function displayWizardEvent(health, currentTurn, maxTurns, healthMultiplier, dam
             alert(`Correct! You recived a ${healthPack.name} that restored ${healthPack.health * healthMultiplier} health.`);
         } else {
             //if incorrect, reduce health by 50 multiplied by the damage multiplier
-            health -= 50 * damageMultiplier;
-            alert(`Wrong answer! The wizard scolds you and you lose 50 health.`);
+            const actualDamage = 50 * damageMultiplier;
+            health -= actualDamage;
+            alert(`Wrong answer! The wizard scolds you and you lose ${actualDamage} health.`);
         }
 
         // check if health is below 200 and show alert

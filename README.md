@@ -35,3 +35,15 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
 - As a player, I want to be able to choose different difficulty levels.
 - As a player, I want to see my health status and progress throughout the game.
 - As a player, I want to be able to reset the game and play again.
+
+### Scope Plane
+
+#### Features Implemented at Launch
+- **Home Page:** Introduction to the game and starting interface.
+- **Game Interface:** Display of player health, event descriptions, and decision buttons.
+- **Reset Functionality:** Allows players to reset the game and start over.
+
+#### Planned Future Features
+- **Leaderboard:** Display top player scores.
+- **Achievements:** Unlockable achievements for completing specific challenges.
+- **Multiplayer Mode:** Option to play with friends online.

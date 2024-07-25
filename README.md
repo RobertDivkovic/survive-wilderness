@@ -1,5 +1,10 @@
 # Escape the Wilderness
 
+
+[Link to live page](https://robertdivkovic.github.io/survive-wilderness/)
+
+![alt text](/docs/images/responsive1.png)
+
 Welcome to "Escape the Wilderness"! This game challenges players to survive in a wilderness filled with obstacles, enemies, and friendly creatures. Players must navigate through various events and make strategic decisions to ensure their survival.
 
 ## Table of Contents
@@ -208,14 +213,12 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
 - **Gradient Backgrounds:**
   - Used for sections such as the event area to provide depth and visual interest.
 - **Examples:**
-  - ![Gradient Background]()
+  - ![Gradient Background](/docs/images/gradient.png)
 
 ##### Typography
 - **Fonts:**
   - **Primary Font:** Verdana, Geneva, Tahoma, sans-serif for all text, providing a clean and modern appearance.
   - **Font Styles:** Consistent use of font weights and sizes for headings, subheadings, and body text to create a clear visual hierarchy.
-- **Examples:**
-  - ![Typography]()
 
 ##### Imagery
 - **Event Illustrations:**
@@ -225,8 +228,7 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
 - **Scaling:**
   - Images scale appropriately on different screen sizes to maintain quality and responsiveness.
 - **Examples:**
-  - ![Event Illustration]()
-  - ![Background Decoration]()
+  - ![Event Illustration](/docs/images/eventillustration.png)
 
 ##### Responsiveness
 - **Layout Adjustments:**
@@ -234,15 +236,28 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
 - **Flexible Grid System:**
   - Ensures that images and text sections are well-organized and maintain their layout integrity across different screen sizes.
 - **Examples:**
-  - ![Responsive Layout]()
+  - ![Responsive Layout](/docs/images/responsive.png)
 
 ##### Hover and Click Effects
 - **Hover Effects:**
   - Subtle changes in color and shadow on interactive elements to indicate interactivity.
 - **Click Effects:**
   - Brief animations or changes in button appearance to provide immediate feedback on user actions.
-- **Examples:**
-  - ![Hover Effect]()
-  - ![Click Effect]()
 
 This detailed Surface Plane section ensures that the visual and interactive elements of the "Escape the Wilderness" game are cohesive, engaging, and accessible across various devices and screen sizes.
+
+## Technologies Used
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [GitHub](https://github.com/)
+- [Git](https://git-scm.com/)
+- [jQuery](https://jquery.com/)
+- [Flaticon](https://www.flaticon.com/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Hover.css](https://ianlunn.github.io/Hover/)
+- [FontAwesome](https://fontawesome.com/)
+- [CodeAnywhere](https://codeanywhere.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [QuillBot](https://quillbot.com/)
+- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+

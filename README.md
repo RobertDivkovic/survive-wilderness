@@ -261,3 +261,55 @@ This detailed Surface Plane section ensures that the visual and interactive elem
 - [QuillBot](https://quillbot.com/)
 - [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
 
+## Testing
+
+### User Stories Testing
+
+- **Player Name Input:** Ensured the player must enter a name to start the game.
+- **Difficulty Selection:** Tested all difficulty levels to ensure appropriate game behavior.
+- **Event Descriptions:** Checked that all events and options display correctly.
+- **Decision Buttons:** Confirmed that decision buttons work as expected and impact the game state.
+- **Reset Button:** Ensured the reset button clears the game state and allows players to start over.
+
+### Manual Testing
+
+- **Navigation Bar:** Not applicable.
+- **Footer:** Not applicable.
+- **Game Interface:**
+  - Fully responsive on large, medium, and small resolutions.
+  - All interactive elements (buttons, inputs) function as expected.
+
+### Devices Used During Testing
+- Desktop Computer
+- Razer Blade 15 Advanced (laptop)
+- Samsung A53
+- Samsung A50
+- iPhone 13
+- Lenovo Tab M10 Plus
+- Acer (laptop)
+
+### Browser Testing
+The game was tested on the following browsers:
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+- Safari
+
+### Chrome Dev Tools
+Chrome Dev Tools was used throughout the development of the project to test responsiveness. Responsiveness was tested using Dev Tools to emulate the following devices:
+- iPhone SE
+- iPhone XR
+- iPhone 12 Pro
+- iPhone 14 Pro Max
+- Pixel 7
+- Samsung Galaxy S8+
+- Samsung Galaxy S20 Ultra
+- iPad Mini
+- iPad Air
+- iPad Pro
+- Surface Pro 7
+- Surface Duo
+- Galaxy Fold
+- Samsung Galaxy A51/71
+- Nest Hub
+- Nest Hub Max

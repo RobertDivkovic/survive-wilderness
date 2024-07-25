@@ -137,7 +137,6 @@ button:hover {
 .event-image {
     width: 66%;
     height: 66%;
-    margin-bottom: 15px 15px;
     flex-wrap: wrap;
 }
 

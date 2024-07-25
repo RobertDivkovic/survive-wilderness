@@ -47,3 +47,8 @@ Welcome to "Escape the Wilderness"! This game challenges players to survive in a
 - **Leaderboard:** Display top player scores.
 - **Achievements:** Unlockable achievements for completing specific challenges.
 - **Multiplayer Mode:** Option to play with friends online.
+
+### Structure Plane
+- **Home Page:** Introduction, player name input, difficulty selection, and start button.
+- **Game Interface:** Health bar, turn counter, event area, and decision buttons.
+- **Reset Button:** Allows players to reset the game and start over.

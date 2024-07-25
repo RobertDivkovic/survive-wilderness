@@ -1118,10 +1118,11 @@ function displayEvent(event, health, currentTurn, maxTurns, healthMultiplier, da
     event.options.forEach((option, index) => {
         // create a new button element
         const button = document.createElement('button');
+        const actualDamage = option.damage * damageMultiplier;
         button.innerText = option.text;
         button.addEventListener('click', () => {
             //decrease health by the option's damage value
-            health -= actual.damage;
+            health -= actualDamage;
             //show an alert with the option text and the damage caused if any
             alert(option.text + (actualDamage > 0 ? ` and took ${actualDamage} damage.` : " was safe."));
 
